@@ -1,0 +1,86 @@
+@big_desktop: 1110px;
+@desktop: 975px;
+@tablet_landscape: 860px; //footer change
+@tablet_portrait: 620px; //font-size change
+@phone: 425px;
+@phone_smallest: 365px;
+
+
+.respond(@break; @content) when (@break=big-desktop) {
+  @media only screen and (max-width: @big_desktop) {
+    @content();
+  }
+}
+
+.respond(@break; @content) when (@break=desktop) {
+  @media only screen and (max-width: @desktop) {
+    @content();
+  }
+}
+
+.respond(@break; @content) when (@break=tab-land) {
+  @media only screen and (max-width: @tablet_landscape) {
+    @content();
+  }
+}
+
+.respond(@break; @content) when (@break=tab-port) {
+  @media only screen and (max-width: @tablet_portrait) {
+    @content();
+  }
+}
+
+.respond(@break; @content) when (@break=phone) {
+  @media only screen and (max-width: @phone) {
+    @content();
+  }
+}
+
+.respond(@break; @content) when (@break=phone-smallest) {
+  @media only screen and (max-width: @phone_smallest) {
+    @content();
+  }
+}
+
+.respond(@break; @content) {
+	@media only screen and (max-width: @break) {
+		@content();
+	}
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+.hover-color(@color:white, @time: 0.2s, @ease: ease-in-out) {
+  transition: color @time @ease;
+  &:hover {
+    color: @color;
+  }
+}
+
+.hover-background-color(@borderOnly, @color: white, @time: 0.2s, @ease: ease-in-out)
+  when
+  (@borderOnly = false) {
+  transition: background-color @time @ease;
+  &:hover {
+    background-color: @color;
+  }
+}
+
+.hover-background-color(@borderOnly, @color: white, @time: 0.2s, @ease: ease-in-out)
+  when
+  not
+  (@borderOnly = false) {
+  transition: background-color @time @ease, border-color @time @ease;
+  &:hover {
+    background-color: @color;
+		border-color: @color;
+  }
+}
