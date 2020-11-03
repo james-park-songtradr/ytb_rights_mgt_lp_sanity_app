@@ -1,0 +1,39 @@
+.main {
+	height: calc(~"100vh -" @navigation-height);
+	background-color: var(--white);
+	display: flex;
+	min-height: 630px;
+
+	&-one {
+		flex: 1;
+		background-color: white;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		padding: 20px;
+
+		.field {
+			width: 500px;
+
+			.str-btn--orange {
+				margin-top: 25px;
+				width: 125px;
+			}
+		}
+	}
+
+	&-two {
+		flex: 1;
+		padding: 50px;
+		background-color: var(--white);
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		.str-panel {
+			height: 600px;
+			width: 600px;
+		}
+	}
+}

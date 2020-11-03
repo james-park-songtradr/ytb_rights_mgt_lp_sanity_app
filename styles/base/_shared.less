@@ -1,18 +1,35 @@
 .str-btn {
-	height: 40px; 
+  height: 40px;
 
-	&:focus {
-		outline: 0;
-	}
+  &:focus {
+    outline: 0;
+  }
 
-	&--white {
-		background-color: var(--white);
-		color: var(--orange);
-		border: 1px solid var(--white);
+  &--white {
+    background-color: var(--white);
+    color: var(--orange);
+    border: 1px solid var(--white);
 
-		&_hover {
-			.hover-color(var(--orange));
-			.hover-background-color(true, darken(white, 20%));
-		}
-	}
+    &_hover {
+      .hover-color(var(--orange));
+      .hover-background-color(true, darken(white, 20%));
+    }
+  }
+
+  &--orange {
+    background-color: var(--orange);
+    color: var(--white);
+    border: 1px solid var(--orange);
+
+    &_hover {
+			.hover-color(var(--white));
+      .hover-background-color(true, #B93E17);
+    }
+  }
+}
+
+.str-panel {
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.5) 0px 0.6rem 1.3rem 0px;
+	border-radius: 0.25rem;
 }
