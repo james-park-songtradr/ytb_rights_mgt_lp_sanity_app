@@ -1,0 +1,62 @@
+.fill {
+	display: flex;
+	padding: 200px 0;
+	justify-content: center;
+
+
+	&-one {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+
+		.str-banner-orange {
+			width: 400px;
+			margin: 70px;
+
+			.heading-primary {
+				margin-top: 15px;
+			}
+		}
+
+		.graph {
+			height: 300px;
+			width: 450px;
+			margin-right: 70px;
+			border: 1px solid var(--orange);
+		}
+	}
+
+	&-two {
+		flex: 1;
+		position: relative;
+
+		.panel-one {
+			height: 610px;
+			width: 580px;
+			position: absolute;
+			background-color: var(--orange);
+			margin-left: 100px;
+		}
+
+		.panel-two {
+			height: 300px;
+			width: 450px;
+			position: absolute;
+			background-color: @background-gray;
+			margin-left: 50px;
+			left: 0%;
+			top: 25%;
+		}
+
+		.panel-three {
+			height: 300px;
+			width: 450px;
+			position: absolute;
+			background-color: var(--white);
+			left: 0%;
+			top: 20%;
+		}
+	}
+}

@@ -1,17 +1,26 @@
 @font-face {
   font-family: 'bebas-neue';
-  src: url('/fonts/BebasNeue.otf'); // pattern: /directoryName/file.extension
+	src: url('/fonts/BebasNeue.otf'); // pattern: /directoryName/file.extension
+	font-weight: 400;
+}
+
+@font-face {
+  font-family: 'bebas-neue';
+	src: url('/fonts/BebasNeueRegular.ttf'); // pattern: /directoryName/file.extension
+	font-weight: 100;
 }
 
 @font-primary: bebas-neue;
 @font-secondary: proxima-nova;
 @bold: 700;
 @regular: 400;
-@light: 300;
+@light: 100;
 
 @font-l: 2.9rem;
-@font-m: 3.8rem;
-@font-ms: 2.8rem;
+@font-m: 2.8rem;
+@font-ms: 1.8rem;
+@font-mss: 1.5rem;
+@font-msss: 1.2rem;
 @font-s: 1rem;
 
 .heading-primary {
@@ -25,22 +34,23 @@
 		margin-bottom: 10px;
 	}
 	&--sub {
-		font-family: @font-primary, sans-serif;
-		font-size: @font-ms;
-		font-weight: @regular;
+		font-family: @font-secondary, sans-serif;
+		font-size: @font-mss;
+		font-weight: @light;
 	}
 }
 
 .heading-secondary {
 	color: var(--black);
 	&--main {
-		font-family: @font-secondary, helvetica, arial, sans-serif;
-		font-size: @font-m;
-		font-weight: @bold;
+		font-family: @font-primary, helvetica, arial, sans-serif;
+		font-size: @font-ms;
+		font-weight: @light;
 	}
 	&--sub {
 		font-family: @font-secondary, helvetica, arial, sans-serif;
-		font-weight: @regular;
+		font-size: @font-msss;
+		font-weight: @light;
 	}
 }
 

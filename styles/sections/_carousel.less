@@ -1,0 +1,76 @@
+.carousel {
+	display: flex;
+	padding: 200px 0;
+	justify-content: center;
+	background-color: var(--black);
+
+
+	&-one {
+		flex: 1;
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+
+			.artists {
+				height: 535px;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+				position: relative;
+
+				&-one {
+					height: 470px;
+					width: 470px;
+					background-color: indianred;
+				}
+
+				&-two {
+					height: 500px;
+					width: 500px;
+					background-color: @background-gray;
+					position: absolute;
+					top: 0;
+					left: 40px;
+					z-index: 9000;
+				}
+			}
+	}
+
+	&-two {
+		flex: 1;
+		position: relative;
+
+		.comments {
+			margin-left: 175px;
+			.paragraph-primary {
+				color: var(--white);
+			}
+			.str-banner-orange {
+				color: var(--white);
+				width: 320px;
+				margin-top: 100px;
+				padding-top: 15px
+			}
+			.heading-primary {
+				color: var(--white);
+			}
+			.arrows {
+				margin-top: 125px;
+				display: flex;
+
+				&-left {
+					height: 20px;
+					width: 20px;
+					background-color: var(--white);
+				}
+				&-right {
+					height: 20px;
+					width: 20px;
+					background-color: var(--white);
+					margin-left: 20px;
+				}
+			}
+		}
+
+	}
+}
